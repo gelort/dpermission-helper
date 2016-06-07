@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
 
 android {
     compileSdkVersion 23
@@ -32,37 +33,35 @@ group = GROUP
 
 install {
     repositories.mavenInstaller {
-        pom {
-            project {
-                packaging 'aar'
-                groupId GROUP
-                artifactId ARTIFACT_ID
+        pom.project {
+            packaging 'aar'
+            groupId GROUP
+            artifactId ARTIFACT_ID
 
-                // Add your description here
-                name POM_LIBRARY
-                description POM_DESCRIPTION
-                url POM_URL
+            // Add your description here
+            name POM_LIBRARY
+            description POM_DESCRIPTION
+            url POM_URL
 
-                // Set your license
-                licenses {
-                    license {
-                        name POM_LICENCE_NAME
-                        url POM_LICENCE_URL
-                    }
+            // Set your license
+            licenses {
+                license {
+                    name POM_LICENCE_NAME
+                    url POM_LICENCE_URL
                 }
-                developers {
-                    developer {
-                        id POM_DEVELOPER_ID
-                        name POM_DEVELOPER_NAME
-                        email POM_DEVELOPER_EMAIL
-                    }
+            }
+            developers {
+                developer {
+                    id POM_DEVELOPER_ID
+                    name POM_DEVELOPER_NAME
+                    email POM_DEVELOPER_EMAIL
                 }
-                scm {
-                    connection POM_SCM_CONNECTION
-                    developerConnection POM_SCM_DEV_CONNECTION
-                    url POM_SCM_URL
+            }
+            scm {
+                connection POM_SCM_CONNECTION
+                developerConnection POM_SCM_DEV_CONNECTION
+                url POM_SCM_URL
 
-                }
             }
         }
     }
