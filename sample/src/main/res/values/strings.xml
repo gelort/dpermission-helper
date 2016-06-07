@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DPermissionHelper</string>
+    <string name="permission_declined_message">Permission declined: %s</string>
+    <string name="permission_granted_message">Permission granted: %s</string>
+    <string name="location_permission_required">The location permission is required for use application</string>
+    <string name="camera_permission_required">The camera permission is required for use application</string>
+
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+</resources>
